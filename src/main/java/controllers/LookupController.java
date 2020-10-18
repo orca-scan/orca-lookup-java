@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class LookupController {
 	
-	@RequestMapping(method = RequestMethod.GET, produces = {"application/json"})
+	@RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
 	@ResponseBody
 	public HashMap<String, Object> Lookup(String barcode) {
 

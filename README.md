@@ -40,6 +40,42 @@ mvn install
 mvn spring-boot:run
 ```
 
+Visit [http://localhost:5000?barcode=4S3BMHB68B3286050](http://localhost:5000?barcode=4S3BMHB68B3286050) to see the following:
+
+```json
+{
+    "VIN": "4S3BMHB68B3286050",
+    "Make": "SUBARU",
+    "Model": "Legacy",
+    "Manufacturer Name": "FUJI HEAVY INDUSTRIES U.S.A",
+    "Vehicle Type": "PASSENGER CAR",
+    "Year": 1992
+}
+```
+
+## How this example works
+
+```java
+@RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
+@ResponseBody
+public HashMap<String, Object> Lookup(String barcode) {
+
+    // TODO: query a database or API to retrieve some data based on barcode value
+
+    // return data as JSON object (property names must match Orca column names)
+    HashMap<String, Object> data = new HashMap<String, Object>();
+
+    data.put("VIN", barcode);
+    data.put("Make", "SUBARU");
+    data.put("Model", "Legacy");
+    data.put("Manufacturer Name", "FUJI HEAVY INDUSTRIES U.S.A");
+    data.put("Vehicle Type", "PASSENGER CAR");
+    data.put("Year", 1992);
+
+    return data;
+}
+```
+
 ## Troubleshooting
 
 If you run into any issues not listed here, please [open a ticket](https://github.com/orca-scan/orca-lookup-java/issues).
