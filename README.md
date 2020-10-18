@@ -63,8 +63,7 @@ public HashMap<String, Object> Lookup(String barcode) {
     // TODO: query a database or API to retrieve some data based on barcode value
 
     // return data as JSON object (property names must match Orca column names)
-    HashMap<String, Object> data = new HashMap<String, Object>();
-
+    HashMap<String, Object> data = new HashMap<>();
     data.put("VIN", barcode);
     data.put("Make", "SUBARU");
     data.put("Model", "Legacy");
