@@ -37,7 +37,7 @@ mvn install
 ## Run
 
 ```bash
-mvn spring-boot:run
+mvn spring-boot:run -Dserver.port=5000
 ```
 
 Visit [http://localhost:5000?barcode=4S3BMHB68B3286050](http://localhost:5000?barcode=4S3BMHB68B3286050) to see the following:
