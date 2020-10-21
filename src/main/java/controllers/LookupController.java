@@ -24,6 +24,6 @@ public class LookupController {
 		data.put("Vehicle Type", "PASSENGER CAR");
 		data.put("Year", 1992);
 
-    	return data;
+    		return data;
 	}
 }
