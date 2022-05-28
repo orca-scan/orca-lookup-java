@@ -21,6 +21,13 @@ First ensure you have [Java](https://adoptopenjdk.net/?variant=openjdk8&jvmVaria
 java -version
 ```
 
+Also ensure you have [Maven](https://maven.apache.org/download.cgi) installed:
+
+```bash
+# should return 3.8.5 or higher
+mvn -v
+```
+
 Then execute the following:
 
 ```bash
@@ -37,7 +44,7 @@ mvn install
 ## Run
 
 ```bash
-mvn spring-boot:run -Dserver.port=5000
+mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=5000
 ```
 
 Visit [http://localhost:5000?barcode=4S3BMHB68B3286050](http://localhost:5000?barcode=4S3BMHB68B3286050) to see the following:
